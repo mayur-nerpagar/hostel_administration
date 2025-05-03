@@ -1,0 +1,60 @@
+<tr>
+                                                <td colspan="3"><b>Date & Time of Registration: <?php echo $row->postingDate;?></b></td>
+                                                
+                                            </tr>
+
+                                            <!-- <tr> 
+
+                                            <td><b>Room no :</b></td>
+                                            <td><?php echo $row->roomno;?></td>
+
+                                            <td><b>Starting Date :</b></td>
+                                            <td><?php echo $row->stayfrom;?></td>
+
+                                            <td><b>Seater :</b></td>
+                                            <td><?php echo $row->seater;?></td>
+                                             By Netgoplus - Netgoplus.com 
+
+                                            </tr>-->
+
+                                            <tr>
+
+                                            <td><b>Duration:</b></td>
+                                            <td><?php echo $dr=$row->duration;?> Months</td>
+
+                                            <td><b>Food Status:</b></td>
+                                            <td>
+                                            <?php if($row->foodstatus==0){
+                                            echo "Not Required";
+                                            } else {
+                                            echo "Required";
+                                            }
+                                            ;?> </td>
+
+                                            <td><b>Fees Per Month :</b></td>
+                                            <td>$<?php echo $fpm=$row->feespm;?></td>
+
+                                            
+
+                                            </tr>
+
+                                            <tr>
+                                            <td colspan="6"><b>Total Fees (<?php echo ($dr).' months'?>) : 
+                                            <?php if($row->foodstatus==1){ 
+                                            $fd=211; 
+                                            echo '$'.(($fd+$fpm)*$dr);
+                                            } else {
+                                            echo '$'.$dr*$fpm;
+                                            }
+                                            ?></b></td>
+                                            </tr>
+
+                                             </td>
+                                            <td><b>Permanent Address:</b></td>
+                                            <td colspan="2">
+                                            <?php echo $row->pmntAddress;?><br />
+                                            <?php echo $row->pmntCity;?>, <?php echo $row->pmntPincode;?><br />	
+
+                                            </td>
+
+
